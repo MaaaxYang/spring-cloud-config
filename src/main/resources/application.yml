@@ -10,7 +10,7 @@ spring:
           uri: https://gitee.com/MaxxxYang/spring-cloud-config-repo/
           search-paths: config-repo
           username: MaxxxYang
-          password: gitee.925101
+          password: ******
           default-label: master
     bus:
       trace:
