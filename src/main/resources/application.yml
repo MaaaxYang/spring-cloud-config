@@ -1,0 +1,33 @@
+server:
+  port: 8700
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/MaxxxYang/spring-cloud-config-repo/
+          search-paths: config-repo
+          username: MaxxxYang
+          password: gitee.925101
+          default-label: master
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: sa
+    password: 123456
+          # java -jar config-center-0.0.1-SNAPSHOT.jar --spring.profiles.active=config1
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
